@@ -53,6 +53,11 @@ To get to know how lock in DynamoDB works, read the following [title](https://an
   }
 }`
 
+
+![alt text](./images/c5.PNG)
+
+
+
 ![alt text](./images/c4.PNG)
 
 
