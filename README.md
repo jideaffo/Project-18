@@ -37,14 +37,13 @@ To get to know how lock in DynamoDB works, read the following [title](https://an
 1. Create a file and name it backend.tf. Add the below code and replace the name of the S3 bucket you created in Project-16.
 
 
-`# Note: The bucket name may not work for you since buckets are unique globally in AWS, so you must give it a unique name.
-resource "aws_s3_bucket" "terraform_state" {
+`resource "aws_s3_bucket" "terraform_state" {
   bucket = "dev-terraform-bucket"
-  # Enable versioning so we can see the full revision history of our state files
+
   versioning {
     enabled = true
   }
-  # Enable server-side encryption by default
+
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
@@ -53,6 +52,8 @@ resource "aws_s3_bucket" "terraform_state" {
     }
   }
 }`
+
+![alt text](./images/c4.PNG)
 
 
 You must be aware that Terraform stores secret data inside the state files. Passwords, and secret keys processed by resources are always stored in there. Hence, you must consider to always enable encryption. You can see how we achieved that with server_side_encryption_configuration
