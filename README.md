@@ -286,6 +286,9 @@ Complete the rest of the codes yourself, the resulting configuration structure i
 
 
 
+![alt text](./images/c3.PNG)
+
+
 Now, the code is much more well-structured and can be easily read, edited and reused by your DevOps team members.
 
 BLOCKERS: Your website would not be available because the userdata scripts we added to the launch template does not contain the latest endpoints for EFS, ALB and RDS and also our AMI is not properly configured, so how do we fix this?
