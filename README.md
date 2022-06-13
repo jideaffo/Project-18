@@ -116,6 +116,9 @@ output "dynamodb_table_name" {
 }`
 
 
+![alt text](./images/c6.PNG)
+
+
 Now we have everything ready to go!
 
 
